@@ -1,0 +1,15 @@
+print("Dijita la fecha")
+date = input()
+print("Dijita tu nombre")
+nombre = input()
+
+print("Calorias consumida en el desayuno")
+calorias = int(input())
+print("Calorias consumidas en el almuerzo")
+caloriasAL= int(input())
+print("Calorias consumumidas en la cena")
+caloriasC= int(input())
+print("Calorias consumidas en el refigerio")
+caloriasF= int(input())
+sum = caloriasAL+caloriasF+calorias+caloriasC
+print("Sum Calorias: " +str(sum) + " :  " + "Fecha "+ date  +" : " + nombre) 
