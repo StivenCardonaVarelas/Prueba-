@@ -1,0 +1,50 @@
+[ 
+    {
+     
+    
+     "id": "1",    
+    "Cedula": "14.244.19.203/13",
+    "Nombre": "Ardelis",
+    "Apellido ": "Pesic",
+    "Fecha_nacimeinto ": "10/27/2019",
+    "Correo_electronico": "apesic0@newyorker.com",
+    "Numero_conntacto ": "673-685-6556",
+    "Direccion_recidencia ": "899-52-1545",
+    "Telefono_fijo ": "848-997-0010",
+    "Genero": "Female",
+    "Estrato": 1,
+    "Nombre_barrio": "Blackbird",
+    "Ocupacion": "Center for Entrepreneurship and Small Business Management"
+  }, {
+      "id": "2",
+    "Cedula": "44.2.215.72/23",
+    "Nombre": "Berk",
+    "Apellido": "Merle",
+    "Fecha_nacimeinto": "8/28/2020",
+    "Correo_electronico": "bmerle1@google.fr",
+    "Numero_conntacto": "101-245-5192",
+    "Direccion_recidencia ": "460-25-0111",
+    "Telefono_fijo": "298-298-0745",
+    "Genero": "Male",
+    "Estrato": 2,
+    "Nombre_barrio": "Buena Vista",
+    "Ocupacion": "University of Northern Washington"
+  },{
+    "id": "2",
+    "Cedula": "236.186.116.131/28",
+    "Nombre": "Jamaal",
+    "Apellido": "Blofield",
+    "Fecha_nacimeinto": "2/27/2020",
+    "Correo_electronico": "jblofield2@delicious.com",
+    "Numero_conntacto ": "974-644-5516",
+    "Direccion_recidencia": "261-02-2614",
+    "Telefono_fijo": "691-223-1617",
+    "Genero": "Male",
+    "Estrato": 3,
+    "Nombre_barrio": "Sommers",
+    "Ocupacion": "Jiwaji University"
+  }
+
+]
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "trabajopp1_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+
+
+  },
+  "keywords": [],
+  "author": "Stiven Cardona",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+  
+}
