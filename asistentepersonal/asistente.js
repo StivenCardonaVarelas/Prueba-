@@ -17,7 +17,7 @@ if (annyang) {
 
     //Definimos los comandos a utilizar.
     var commands = {
-        'hola Adian': function () {
+        'hola Alex': function () {
             utter.text = 'Hola usuario';
             //Setea la voz que queremos usar en base a nuestra lista.
             utter.voice = voices[7];
