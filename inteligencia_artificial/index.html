@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jscolor.js"></script>
+   
+       
+    <title>Red neuronal</title>
+</head>
+<style>
+    #sitios{
+        padding: 5rem;
+        font-size: 5rem;
+    }
+</style>
+<body>
+    <div id="sitios">
+       Mi sitio web
+
+    </div>
+    <script type="https://unpkg.com/brain.js"></script>
+    <input data-jscolor="{onInput:'update(this)', alpha:1.0}" id="colorInput">
+
+     <script type="text/javascript">
+        //inicio de la red
+        var network = new brain.NeuralNetwork();
+
+        //entrenar
+        network.train([ 
+            //fondo negro texto blanco
+        { input: {rojo:0, verde:0, azul:0}, output:{color:1}},
+        //fondo blanco texto negro
+        { input: {rojo:1, verde:1, azul:1}, output:{color:0}}
+        
+
+           ]);
+
+
+
+
+
+        function update(color) {
+            //console.log(color.rgb);
+            var div = document.getElementById("sitios");
+            div.style.background = "#"+ color;
+
+            //Tomar fondo actual de usuario , para usarlo de 
+            //entrada para que la red de su predicion
+
+            var entrada = {
+                rojo: color.rgb[0]/255,
+                verde: color.rgb[1]/255,
+                azul: color.rgb[2]/255
+
+                }
+                //obtener la predicion
+
+                var resultado=network.run(entrada);
+                //imprimir la predicion
+                console.log(resultado);
+
+
+            
+
+
+
+        }
+    </script>
+
+   
+</body>
+
+
+   
+</html>
