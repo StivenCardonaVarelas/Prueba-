@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const express = require('express');
+const expbhs = require('express-handlebars');
+const path = require('path');
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//Initlalazations
+const app =express();
+//settings
+app.set('views',path.join(__dirname, 'views'));
+app.engine('.hbs',expbhs({
+    defaultLayout: 'main',
+    layoutsDir:path.join(app.get('views'),'layouts'),
+    partialsDir:path.join(app.get('views'),'partials'),
+    extname: '.hbs'
+    
+}));
+app.set('view engine','.hbs');
+//middleware
+app.use(express.urlencoded({extend:false}));
+app.use(express.json());
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+//routers
+app.use(require('./routes/index'));
+
+//Static files
+app.use(express.static(path.join(__dirname, 'public')));
+
+//start server
+app.listen(3000,()=>{
+    console.log('Server on port',3000);
+});
