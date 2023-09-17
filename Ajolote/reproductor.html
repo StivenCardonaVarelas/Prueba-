@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/descarga.png" />
+    <title>Proyecto Ajolote</title>
+</head>
+
+<body>
+    <h1 class="nav">Menú Taylor Version</h1>
+    
+    <div class="container">
+        <div id="reproductorBox"></div>
+        <div class="song">
+            <select id="selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+            <option value="./musica\Taylor Swift - Love Story (Taylor’s Version) [Official Lyric Video].mp3">Love story</option>
+            <option value="./musica\Taylor Swift - Delicate.mp3">Delictae</option>
+            <option value="./musica\Taylor Swift - willow (Official Music Video).mp3">Willo</option>
+            <option value="./musica\Taylor Swift - Our Song.mp3">Our song</option>
+            <option value="./musica\I Know Places.mp3">I know places</option>
+            <option value="./musica\Taylor Swift - Miss Americana & The Heartbreak Prince (Official Audio).mp3">miss americana</option>
+            <option value="./musica\Taylor Swift - Speak Now (Taylor's Version) (Lyric Video).mp3">Speak now</option>
+            <option value="./musica\Taylor Swift – seven (Official Lyric Video).mp3">Seven</option>
+            <option value="./musica\Taylor Swift - Lavender Haze (Official Music Video).mp3">Lavander</option>
+            <option value="./musica\Taylor Swift - Stay Stay Stay (Taylor's Version) (Lyric Video).mp3">Stay stay</option>
+           
+        </select>
+
+        </div>
+        
+    </div>
+    
+
+<div class="container2">
+     <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+        <div class="wheel"></div>
+        <div class="hamster">
+            <div class="hamster__body">
+                <div class="hamster__head">
+                    <div class="hamster__ear"></div>
+                    <div class="hamster__eye"></div>
+                    <div class="hamster__nose"></div>
+                </div>
+                <div class="hamster__limb hamster__limb--fr"></div>
+                <div class="hamster__limb hamster__limb--fl"></div>
+                <div class="hamster__limb hamster__limb--br"></div>
+                <div class="hamster__limb hamster__limb--bl"></div>
+                <div class="hamster__tail"></div>
+            </div>
+        </div>
+        <div class="spoke"></div>
+    </div>
+</div>
+<h1>Ajolote & Morito</h1>
+<div class="container2">
+    <div class="box">
+    <span style="--i:1;"><img src="./img/46c67930-0eb8-4db9-99cd-22ab5d3ae870.jpeg" alt=""></span>
+    <span style="--i:2;"><img src="./img/The_Eras_Tour_poster.jpg" alt=""></span>
+    <span style="--i:3;"><img src="./img/acuarela-adorable-ajolote-ilustracion_52683-79674.avif" alt=""></span>
+    <span style="--i:4;"><img src="./img/descarga (2).jpeg" alt=""></span>
+    <span style="--i:5;"><img src="./img/Screenshot_2.png" alt=""></span>
+    <span style="--i:6;"><img src="./img/WhatsApp Image 2023-09-09 at 22.47.15.jpeg" alt=""></span>
+    <span style="--i:7;"><img src="./img/League_of_Legends_logo.webp" alt=""></span>
+    <span style="--i:8;"><img src="./img/965e634c7e30ad3a81edfccedc7b6ddc.jpg" alt=""></span>
+</div>
+</div>
+
+<div class="container2"></div>
+
+<script type="text/javascript">
+    let box = document.querySelector('.box');
+    window.onmousemove = function(e){
+        let x = e.clientX/3;
+        box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+    }
+</script>
+   
+
+    <script>
+        function cambiarTrack(track) {
+            var value = track.getAttribute("value")
+            viejo_audio = document.getElementById("reproductor")
+            audio_padre = viejo_audio.parentNode
+            audio_padre.removeChild(viejo_audio)
+            nuevo_audio = document.createElement("audio")
+            nuevo_audio.setAttribute("id", "reproductor")
+            nuevo_audio.setAttribute("controls", "controls")
+            nuevo_audio.setAttribute("autoplay", "autoplay")
+            source = document.createElement("source")
+            source.setAttribute("src", value)
+            source.setAttribute("type", "audio/mpeg")
+            source.setAttribute("id", "reproductorSource")
+            nuevo_audio.appendChild(source)
+            audio_padre.appendChild(nuevo_audio)
+        }
+        function cargarReproductor() {
+            var select = document.getElementById("selectTrack")
+            var value = select.options[0].getAttribute("value")
+            nuevo_audio = document.createElement("audio")
+            nuevo_audio.setAttribute("id", "reproductor")
+            nuevo_audio.setAttribute("controls", "controls")
+            source = document.createElement("source")
+            source.setAttribute("src", value)
+            source.setAttribute("type", "audio/mpeg")
+            source.setAttribute("id", "reproductorSource")
+            nuevo_audio.appendChild(source)
+            padre = document.getElementById("reproductorBox")
+            padre.appendChild(nuevo_audio)
+        }
+    </script>
+
+    <script>cargarReproductor();</script>
+
+
+
+</body>
+
+</html>
